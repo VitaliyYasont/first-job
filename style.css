@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.header {
+    background-color: #FFFFFF;
+    max-width: 1280px;
+    max-height: 60px;
+    padding: 18px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24); /* Измененная тень */
+}
+
+.name {
+    max-width: 109.53px;
+    max-height: 24px;
+    background-color: #FFFFFF;
+    padding: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+.note-form {
+    background-color: #FFFFFF;
+    max-width: 1152px;
+    max-height: 228px;
+    margin: 24px 64px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px; /* Закругление углов */
+    box-shadow: 0 4px 10px rgba(253, 253, 253, 0), 0 4px 10px rgba(0, 0, 0, 0.2), -4px 0 10px rgba(0, 0, 0, 0.2), 4px 0 10px rgba(0, 0, 0, 0.2)
+}
+
+.nameNote {
+    border-radius: 5px; /* Закругление углов */
+    border: #91919100;
+}
+
+.notes-list{
+    max-width: 824px;
+    max-height: 48px;
+    margin: 138px 228px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
