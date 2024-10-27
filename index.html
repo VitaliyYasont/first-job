@@ -3,131 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>NOTES</title>
   </head>
-
   <body>
-    <div id="app"></div>
     <header class="header">
-      <a href=""><img src="./IMG/📝Notes.png" alt="" /></a>
-      <div>
-        <img src="./IMG/notes.png" alt="" />Всего заметок:<span>5</span>
-      </div>
-      <!-- Ваш код -->
-    </header>
-    <main>
-      <form class="note-form" name="notes">
-        <label class="formi">Название заметки</label>
-        <input type="text" placeholder="Напишите название новой заметки..." />
-
-        <label>Описание новой заметки</label>
-        <input type="text" placeholder="Напишите описание новой заметки..." />
-
-        <div class="filter-box">
-          <h2 class="title-two">Выберите цвет заметки</h2>
-          <ul class="color-items">
-            <li class="selected">
-              <div class="circle yellow"></div>
-            </li>
-            <li>
-              <div class="circle green"></div>
-            </li>
-            <li>
-              <div class="circle blue"></div>
-            </li>
-            <li>
-              <div class="circle red"></div>
-            </li>
-            <li>
-              <div class="circle purple"></div>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="header-wrapper">
+          <a href="" class="logo">
+            <img class="logotip" src="./IMG/📝Notes.png" alt="image" />
+          </a>
         </div>
-        <button><img src="./IMG/plus-svgrepo-com 1.png0" alt="">Добавить заметку</button>
-        <!-- Ваш код -->
-      </form>
-
-      
-        
-        <!-- Ваш код -->
-      </div>
-      <ul class="notes-list">
-        <li>У вас нет еще ни одной заметки</li>
-          <li>Заполните поля выше и создайте свою первую заметку!</li>
-        <!-- Сюда будут рендерится заметки из JavaScript -->
-      </ul>
-
-      <div class="messages-box">
-        <!-- Сюда будут рендерится информационные сообщения из JavaScript -->
-      </div>
-    </main>
-    <script src="js/index.js"></script>
-  </body>
-
-  <!-- <body>
-    <header class="headi">
-      <span class="name">
-        <img src="./IMG/Vector.png" alt="книжулька" class="noti"/>
-        <img src="./IMG/Vector1.png" alt="" class="n">
-        <img src="./IMG/Vector2.png" alt="" class="o">
-        <img src="./IMG/Vector3.png" alt="" class="t">
-        <img src="./IMG/Vector4.png" alt="" class="e">
-        <img src="./IMG/Vector5.png" alt="" class="s">
-    </span>
-      <div><img class="blaknot" src="./IMG/notes.png" alt="блакнотик" /><span class="count">Всего заметок: 5</span></div>
-    </header>
-     <div class="line"></div> -->
-  <!-- <section class="form">
-      <form>
-        <label for="nameNote">Название заметки</label>
-        <input class="nameNote"
-          type="text"
-          id="nameNote"
-          placeholder="Напишите название новой заметки..."
-        />
-        <label for="textNote">Описание новой заметки</label>
-        <input class="textNote"
-          type="text"
-          id="textNote"
-          placeholder="Напишите описание новой заметки..."
-        />
-        <div class="colors">
-            <h2 class="title-two">Выберите цвет заметки</h2>
-            <ul class="color-items">
-              <li class="selected">
-                <div class="circle blue"></div>
-              </li>
-              <li>
-                <div class="circle green"></div>
-              </li>
-              <li>
-                <div class="circle red"></div>
-              </li>
-              <li>
-                <div class="circle black"></div>
-              </li>
-              <li>
-                <div class="circle yellow"></div>
-              </li>
-            </ul>
+        <div class="count">
+          <div class="counter">
+            <img src="./IMG/notes.png" alt="icon-notes" class="header-icon" />
+            Всего заметок: <span id="note-count">0</span>
           </div>
-          <button>
-            <img src="./IMG/plus-svgrepo-com 1.png" alt="plus" />Добавить
-            заметку
-          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <form class="notesform" name="notes">
+        <div class="notesText"><span>Название заметки</span></div>
+        <div>
+          <input
+            type="text"
+            placeholder="Напишите название новой заметки..."
+            class="inputVal"
+            id="noteTitle"
+            autocomplete="off"
+          />
+        </div>
+        <div class="rownee">
+          <div class="inputZam">
+            <div class="notesText"><span>Описание новой заметки</span></div>
+
+            <div class="textarea">
+              <div class="input-container">
+                <textarea
+                  placeholder="Напишите описание новой заметки..."
+                  class="inputValArea"
+                  id="noteContent"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="color-items">
+            <fieldset class="fieldset">
+              <label class="label">Выберите цвет заметки</label>
+              <ul class="radio-list">
+                <li>
+                  <input
+                    checked
+                    class="radio"
+                    type="radio"
+                    name="color"
+                    value="yellow"
+                    aria-label="yellow"
+                  />
+                </li>
+                <li>
+                  <input
+                    class="radio"
+                    type="radio"
+                    name="color"
+                    value="red"
+                    aria-label="red"
+                  />
+                </li>
+                <li>
+                  <input
+                    class="radio"
+                    type="radio"
+                    name="color"
+                    value="green"
+                    aria-label="green"
+                  />
+                </li>
+                <li>
+                  <input
+                    class="radio"
+                    type="radio"
+                    name="color"
+                    value="blue"
+                    aria-label="blue"
+                  />
+                </li>
+                <li>
+                  <input
+                    class="radio"
+                    type="radio"
+                    name="color"
+                    value="purple"
+                    aria-label="purple"
+                  />
+                </li>
+              </ul>
+            </fieldset>
+            <button type="button" class="btn" id="addNoteButton">
+              <img
+                src="./IMG/plus-svgrepo-com.png"
+                alt=""
+                class="plus"
+              />Добавить заметку
+            </button>
+          </div>
         </div>
       </form>
-    </section>
-    <section>
-      <div class="pustota">
-        <p>У вас еще нет ни одной заметки </p>
-        <p>Заполните поля выше и создайте свою первую заметку</p>
+    </main>
+
+    <div class="favourites">
+      <div id="filterText">
+        <input type="checkbox" id="showFavorites" />
+        <label for="showFavorites">Показать только избранные заметки</label>
       </div>
-    </section>
-    <script src="./main.js"></script>
-  </body> -->
+    </div>
+    <ul class="notes-list" id="notesContainer">
+      <!-- Сюда будут рендерится заметки из JavaScript -->
+    </ul>
+
+    <div class="messages-box" id="message">
+      <img id="message-icon" src="" alt="Сообщение" />
+      <span id="message-text"></span>
+    </div>
+
+    <div id="noNotesMessage" class="noNotes">
+      У вас нет еще ни одной заметки<br />
+      Заполните поля выше и создайте свою первую заметку!
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>
